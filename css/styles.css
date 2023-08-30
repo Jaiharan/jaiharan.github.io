@@ -1,0 +1,127 @@
+
+
+:root {
+  --main-color: rgb(255, 255, 255);
+  --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+  --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+  --border: .2rem solid var(--main-color);
+  --border-hover: .2rem dashed var(--main-color);
+  background: #000000;
+}
+
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background: #000000;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  padding: 2rem 9%;
+}
+
+.header .logo {
+  color: var(--main-color);
+  font-size: 2.3rem;
+}
+
+.header .logo i {
+  padding-left: .5rem;
+}
+
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: var(--main-color);
+}
+
+
+
+.home {
+  min-height: 100vh;
+  padding-top: 12rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.home .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.home .row .content {
+  flex: 1 1 42rem;
+}
+
+.home .row .image {
+  flex: 1 1 42rem;
+  padding-top: 10rem;
+  text-align: center;
+}
+
+.home .row .image img {
+  height: 35rem;
+  animation: float 4s linear infinite;
+}
+
+.home .row .content h3 {
+  font-size: 6.5rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-style: italic;
+}
+.home .row .content h3 span {
+  font-size: 30px;
+  
+}
+
+
+.home .row .image img {
+  width: 100%;
+  animation: aboutImage 4s linear infinite;
+}
+
+@keyframes aboutImage {
+
+  0%,
+  100% {
+      transform: scale(.9) translateY(0rem);
+      border-radius: var(--border-radius-hover);
+  }
+
+  50% {
+      transform: scale(.8) translateY(-7rem);
+      border-radius: var(--border-radius);
+  }
+}
+
+
