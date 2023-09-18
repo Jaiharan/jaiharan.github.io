@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jaiharan - Personal Portfolo </title>
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/script.js"></script>
   <script src="https://kit.fontawesome.com/4d409ec8f1.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<div class="cursor"></div>
   <!--Header -->
   <header class="header">
     
@@ -27,8 +27,8 @@
     <div class="row">
       <div class="content">
         <h1>Welcome to my Portfolio</h1>
-        <h3>I'm Jaiharan <br>
-           <span>Full-Stack Developer <a href="#about">Scroll for more</a></span></h3>
+        <h2 data-text="I'm Jaiharan">I'm Jaiharan</h2>
+          <h3><span>Full-Stack Developer<a href="#about">Scroll for more</a></span></h3>
       </div>
       <div class="image">
         <img src="assets/Inhome-img.jpg" alt="inhome-img">
@@ -56,52 +56,123 @@
   <!--Services-->
   <section id="services">
       <div class="services">
-       <div class="container">
-          <h1 class="sub-title">My Services</h1>
-          <div class="services-list">
-            <div>
-              <i class="fa-solid fa-code"></i>
-              <h2>Web Development</h2>
-              <p>Expert web development services: Innovative, responsive, and user-centric solutions tailored to your business needs.</p>
-              <a href="#">Learn more</a>
-           </div>
-            <div>
-              <i class="fa-brands fa-app-store-ios"></i>
-              <h2>App Development</h2>
-              <p>Top-notch app development: Custom-built, scalable, and feature-rich mobile applications for iOS and Android platforms.</p>
-              <a href="#">Learn more</a>
-           </div>
-           <div>
-             <i class="fa-solid fa-user"></i>
-             <h2>Portfolio Builder</h2>
-              <p>Create a stunning web portfolio: Easy-to-use platform, professionally showcase your work, and impress potential clients with your talent.</p>
-              <a href="#">Learn more</a>
-           </div>
+        <h1>Services</h1>
+        <div class="container">
+          
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <i class="fa-solid fa-code"></i>            
+                <h3>Web Development</h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <p> I make Super cool responsive Websites and SEO optimized websites</p>
+                <a href="#" type="button">Read More</a>
+              </div>
+            </div>
+         </div>
+         
+         <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <i class="fa-brands fa-app-store-ios"></i>               <h3>App development</h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <p>I make complex Web Apps and provide Services Through web Apps</p>
+                <a href="#" type="button">Read More</a>
+              </div>
+            </div>
+         </div>
+         
+         
+         <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <i class="fa-solid fa-user"></i>
+                 <h3>Portfolio Builder</h3>
+              </div>
+            </div>
+            <div class="face face2">
+              <div class="content">
+                <p> I make Super Cool Portfolio Websites for Any Professionals</p>
+                <a href="#" type="button">Read More</a>
+              </div>
+            </div>
          </div>
         </div>
       </div>
   </section>
+
   <!--myworks-->
   <section id="myworks">
     <div class="container">
       <h1 class="sub-title">My Works</h1>
       <div class="work-list">
-        <div class="work">
-          <h3>Portfolio Websites</h3>
-          <img src="assets/work-1.png" alt="work=portfolio">
-        </div>
-        <div class="work">
-          <h3>Web Apps</h3>
-          <img src="assets/work-2.png" alt="work-app">
-        </div>
-        <div class="work">
-          <h3>E-commerce Websites</h3>
-          <img src="assets/work-3.png" alt="work-ecom">
-        </div>
+          <div class="work work-1">
+            <h2>Portfolio Websites</h2>
+            <img src="assets/work-1.png" alt="work=portfolio">
+          </div>
+          <div class="work work-2">
+            <h2>Web Apps</h2>
+            <img src="assets/work-2.png" alt="work-app">
+          </div>
+          <div class="work work-3">
+            <h2>E-commerce Websites</h2>
+            <img src="assets/work-3.png" alt="work-ecom">
+          </div>
       </div>
     </div>
   </section>
 
+  <!--contact-->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="container-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i></i>jaiharan1618@gmail.com</p>
+          <p><i></i>9344609347</p>
+          <div class="social-icons">
+          </div>
+          <a href=""></a>
+          </p>
+        </div>
+        <div class="container-right">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript">
+    const cursor = document.querySelector(".cursor");
+    var timeout;
+
+    //follow cursor on mousemove
+    document.addEventListener('mousemove', (e) => {
+      let x = e.pageX;
+      let y = e.pageY;
+
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      cursor.style.display = "block";
+
+      //cursor effect on mousestopped
+      function mouseStopped(){
+        cursor.style.display = "none";
+      }
+      clearTimeout(timeout);
+      timeout = setTimeout(mouseStopped, 1000);
+    });
+
+    //cursor effect on mouseout
+    document.addEventListener("mouseout", () => {
+      cursor.style.display = "none";
+    }); 
+  </script>
 
 </body>
 </html>
