@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Michroma", sans-serif;
+  height: 100vh;
+}
+
+.starting {
+  background-color: black;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.loading-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #191654;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  stroke: rgb(255, 255, 255) !important;
+  fill-opacity: 0 !important;
+  stroke-width: 3px !important;
+  stroke-dasharray: 4500;
+  animation: draw 8s ease;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.name-container {
+  height: 30px;
+  overflow: hidden;
+}
+
+.logo-name {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-weight: bolder;
+}
+
+.starting p {
+  margin: 20px;
+  
+}
+
+.starting button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-color: white;
+  border-style: solid;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Michroma", sans-serif;
+}
+
+.starting button:hover {
+  background-color: white;
+  color: black;
+}
