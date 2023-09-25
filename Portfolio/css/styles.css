@@ -6,7 +6,7 @@
   --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
   --border: .2rem solid var(--main-color);
   --border-hover: .2rem dashed var(--main-color);
-  background: #000000;
+   background: #000000;
 }
 
 
@@ -81,6 +81,7 @@ section {
   background: #000000;
   box-shadow: 0 .5rem 1rem rgba(2, 2, 2, 0.1);
   padding: 2rem 9%;
+  flex-direction: row;
   
 }
 
@@ -97,13 +98,21 @@ section {
   color: var(--main-color);
 }
 
-.header .navbar a {
+.header .navbar p a {
   margin: 0 1rem;
   font-size: 1.7rem;
   color: var(--main-color);
+  
 }
 
+.header .navbar {
+  display: flex;
+  flex-direction: row;
+}
 
+.header .navbar p:hover {
+  transform: scale(1.20);
+}
 
 .home {
   min-height: 100vh;
